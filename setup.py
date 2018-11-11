@@ -16,5 +16,5 @@ setuptools.setup(
 
     packages=setuptools.find_packages(),
 
-    install_requires=['click', 'mlflow', 'pandas', 'pillow', 'tensorflow', 'tensorflow_hub']
+    install_requires=['click', 'mlflow', 'opencv-contrib-python', 'pandas', 'pillow', 'psutil', 'tensorflow', 'tensorflow_hub']
 )

@@ -74,6 +74,7 @@ def discard_missing_files(df: pd.DataFrame, path_colname: str) -> pd.DataFrame:
         path_colname: Name of `df` column that specifies paths to check
     """
     logging.info('Discarding missing files')
+    print(df.loc[:, 'filepath'].values)
     nrows_before = len(df)
     file_exists = df.loc[:, path_colname].progress_apply(
         lambda x: os.path.isfile(x) and os.path.getsize(x) > 0
